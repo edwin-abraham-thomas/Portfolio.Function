@@ -5,12 +5,13 @@ const contactForm = "/contactform";
 
 exports.handler = async(event) => {
     console.log('Request Event : ', event);
+    console.log('Event Http Method : ', event.);
     let response;
 
     switch (true) {
-        case event.httpMethod === 'GET' && event.path === contactForm:
-            const contactFormBody = JSON.parse(event.body);
-            var emailServiceResponse = emailService("Contact Form Alert", contactFormBody, "edwinabrhmt@gmail.com", "edwinabrhmt@gmail.com")
+        case event.httpMethod === 'POST' && event.path === contactForm:
+            const contactFormBody = JSON.stringify(event.body);
+            var emailServiceResponse = emailService.sendMail("Contact Form Alert", contactFormBody, "edwinabrhmt@gmail.com", "edwinabrhmt@gmail.com")
             response = util.buildResponse(200, emailServiceResponse);
             break;
     }

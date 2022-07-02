@@ -16,7 +16,7 @@ async function sendMail(subject, body, senderEmail, recipientEmail) {
         Source: senderEmail,
     };
 
-    return ses.sendEmail(params).promise();
+    return await ses.sendEmail(params).promise();
 }
 
 module.exports.sendMail = sendMail
