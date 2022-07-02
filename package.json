@@ -1,0 +1,19 @@
+{
+    "name": "portfolio.function",
+    "version": "1.0.0",
+    "description": "Backend scripts for the Portfolio UI Project",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/edwinat-dev/Portfolio.Function.git"
+    },
+    "author": "Edwin Abraham Thomas",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/edwinat-dev/Portfolio.Function/issues"
+    },
+    "homepage": "https://github.com/edwinat-dev/Portfolio.Function#readme"
+}
