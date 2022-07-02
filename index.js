@@ -11,8 +11,9 @@ exports.handler = async(event) => {
     switch (true) {
         case event.httpMethod === 'POST' && event.path === contactForm:
             const contactFormBody = JSON.stringify(event.body);
-            var emailServiceResponse = emailService.sendMail("Contact Form Alert", contactFormBody, "edwinabrhmt@gmail.com", "edwinabrhmt@gmail.com")
+            var emailServiceResponse = await emailService.sendMail("Contact Form Alert", contactFormBody, "edwinabrhmt@gmail.com", "edwinabrhmt@gmail.com")
             response = util.buildResponse(200, emailServiceResponse);
+            console.log('eamilservice Response : ', emailServiceResponse);
             break;
     }
 
