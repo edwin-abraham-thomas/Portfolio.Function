@@ -1,4 +1,5 @@
 const util = require('./utils/util');
+const emailService = require('./services/sendMail')
 
 const contactForm = "/contactform";
 
@@ -8,7 +9,11 @@ exports.handler = async(event) => {
 
     switch (true) {
         case event.httpMethod === 'GET' && event.path === contactForm:
-            response = util.buildResponse(200);
+            const contactFormBody = JSON.parse(event.body);
+            emailServiceResponse = emailService("Contact Form Alert", contactFormBody, "edwinabrhmt@gmail.com", "edwinabrhmt@gmail.com")
+            response = util.buildResponse(200, emailServiceResponse);
             break;
     }
+
+    return response;
 }
