@@ -5,7 +5,7 @@ const contactForm = "/contactform";
 
 exports.handler = async(event) => {
     console.log('Request Event : ', event);
-    console.log('Event Http Method : ', event.);
+    console.log('Event Http Method : ', event.httpMethod);
     let response;
 
     switch (true) {
