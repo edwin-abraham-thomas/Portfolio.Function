@@ -42,5 +42,5 @@ jobs:
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws_region: ap-south-1
-          function_name: SmartChair_WebBackend
+          function_name: edwinat-portfolio
           zip_file: bundle.zip
