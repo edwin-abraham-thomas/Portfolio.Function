@@ -1,4 +1,3 @@
-const { ɵɵtsModuleIndicatorApiExtractorWorkaround } = require("@angular/material");
 var aws = require("aws-sdk");
 var ses = new aws.SES({ region: "ap-south-1" });
 
