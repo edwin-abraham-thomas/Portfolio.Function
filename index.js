@@ -10,7 +10,7 @@ exports.handler = async(event) => {
     switch (true) {
         case event.httpMethod === 'GET' && event.path === contactForm:
             const contactFormBody = JSON.parse(event.body);
-            var emailServiceResponse = emailService("Contact Form Alert", contactFormBody, "edwinabrhmt@gmail.com", "edwinabrhmt@gmail.com")
+            var emailServiceResponse = emailService.sendMail("Contact Form Alert", contactFormBody, "edwinabrhmt@gmail.com", "edwinabrhmt@gmail.com")
             response = util.buildResponse(200, emailServiceResponse);
             break;
     }
