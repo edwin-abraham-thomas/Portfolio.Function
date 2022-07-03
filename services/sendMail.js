@@ -1,4 +1,4 @@
-const util = require('./utils/util');
+const util = require('../utils/util')
 
 var aws = require("aws-sdk");
 var ses = new aws.SES({ region: "ap-south-1" });
