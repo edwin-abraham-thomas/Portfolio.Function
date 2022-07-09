@@ -6,7 +6,7 @@ var ses = new aws.SES({ region: "ap-south-1" });
 async function sendMail(subject, body, senderEmail, recipientEmail) {
     var params = {
         Destination: {
-            ToAddresses: [recipientEmail],
+            ToAddresses: recipientEmail,
         },
         Message: {
             Body: {
