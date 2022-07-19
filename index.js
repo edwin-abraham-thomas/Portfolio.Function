@@ -11,7 +11,7 @@ exports.handler = async(event) => {
     switch (true) {
         case event.httpMethod === 'POST' && event.path === contactForm:
             const contactFormBody = JSON.parse(event.body);
-            const mailingList = ['edwinat.dev@outlook.com']
+            const mailingList = ['edwinat.dev@outlook.com', 'edwinabrahamthomas@gmail.com']
             response = await emailService.sendMail("Contact Form Alert", contactFormBody, "edwinabrhmt@gmail.com", mailingList)
             break;
     }
