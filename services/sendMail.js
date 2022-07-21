@@ -10,7 +10,11 @@ async function sendMail(subject, body, senderEmail, recipientEmail) {
         },
         Message: {
             Body: {
-                Text: { Data: JSON.stringify(body) },
+                Text: {
+                    Data: {
+                        "First name": body.firstName
+                    }
+                },
             },
 
             Subject: { Data: subject },
